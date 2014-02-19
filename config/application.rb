@@ -22,5 +22,10 @@ module Pinteresting
 
     #Required for Heroku
     config.assets.initialize_on_precompile = false
+
+    #enabled iframe support
+    config.action_dispatch.default_headers = {
+        'X-Frame-Options' => 'ALLOWALL'
+    }
   end
 end
